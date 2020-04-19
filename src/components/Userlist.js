@@ -1,17 +1,28 @@
 import React from 'react';
+import UserlistItem from './UserlistItem';
 
 const Userlist = () =>{
 
-    const Users = ['Kaitlin', 'Brian', 'Matt', 'Beth', 'Grace'];
+    const Users = [
+        {name: 'Kaitlin'},
+        {name: 'Brian'},
+        {name: 'Matt'},
+        {name: 'Beth'},
+        {name: 'Grace'}
+    ];
 
     return (
-        <div>
-        <h2>Users Online: {Users.length} </h2>
-        {
-            Users.map((user)=>{
-             return <p key={user.toString()}>{user}</p>   
-            })
-        }
+        <div id="userlist">
+            <h2>Users Online: {Users.length} </h2>
+            <ul>
+            {
+                Users.map( (user) =>
+                    <li key={user.name.toString()}>
+                        <UserlistItem {...user}/>
+                    </li>   
+                )
+            }
+            </ul>
         </div>
     );
 }
