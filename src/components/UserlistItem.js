@@ -4,7 +4,7 @@ const UserlistItem = ({name}) => {
 
     return (
         <div id="userlist-item">
-        <span>{name}</span>
+            <span>{name}</span>
         </div>
     );
 }

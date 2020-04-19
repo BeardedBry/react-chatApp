@@ -1,19 +1,80 @@
+$transitionSpeed: 0.5s;
+$sidebarWidth: 14rem;
+
 body {
   color: #FFF;
   background-color: #282c34;
 }
 
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  //max-width: 15rem;
+  //display: block;
+  transition: $transitionSpeed;
+  background-color: #373c46;
+  height: 100%;
+}
+
+.sidebar{
+  &-open {
+    width: $sidebarWidth;
+  }
+
+  &-closed {
+    width: 0;
+  }
+}
+
 #userlist {
-  max-width: 15rem;
-  position: absolute;
   padding: 1rem;
 
   ul {
     list-style: none;
+    padding-left: 0;
+
+    li {
+      margin: 1rem auto;
+    }
+  }
+
+  &-item {
+    display: block;
+    width: 8rem;
+    height: 2rem;
   }
 
 }
 
+#main {
+  padding: 2rem;
+  transition: margin-left $transitionSpeed;
+}
+
+.slider {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  padding-top: 50vh;
+  width: 1rem;
+  text-align: center;
+  background-color: #373c46;
+  transition: $transitionSpeed;
+
+  &-open {
+    margin-left: $sidebarWidth;
+  }
+
+  &-closed {
+    margin-left: 0;
+  }
+
+}
 
 .App {
   text-align: center;
