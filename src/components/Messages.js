@@ -2,7 +2,35 @@ import React from 'react';
 
 const Messages = () =>{
     return (
-        <div>
+        <div id="messages">
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
+            <p>Message Area</p>
             <p>Message Area</p>
         </div>
     );

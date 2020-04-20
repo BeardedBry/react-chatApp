@@ -1,70 +1,85 @@
 $transitionSpeed: 0.5s;
-$sidebarWidth: 14rem;
+$sidebarWidth: 12rem;
 
 body {
-  color: #FFF;
   background-color: #282c34;
+  color: #FFF;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
 }
 
 #sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  //max-width: 15rem;
-  //display: block;
-  transition: $transitionSpeed;
   background-color: #373c46;
   height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transition: $transitionSpeed;
 }
 
 .sidebar{
-  &-open {
-    width: $sidebarWidth;
-  }
-
   &-closed {
     width: 0;
+  }
+  &-open {
+    width: $sidebarWidth;
   }
 }
 
 #userlist {
   padding: 1rem;
+  position: absolute;
 
   ul {
     list-style: none;
     padding-left: 0;
 
     li {
-      margin: 1rem auto;
+      margin: .5rem auto;
     }
   }
 
   &-item {
     display: block;
-    width: 8rem;
     height: 2rem;
+    width: 8rem;
   }
 
 }
 
 #main {
-  padding: 2rem;
+  overflow-y: hidden;
   transition: margin-left $transitionSpeed;
 }
 
+.mainwidth {
+  &-open{
+    width: calc(100vw - 16rem);
+  }
+
+  &-closed{
+    width: calc(100vw - 2rem);
+  }
+}
+
 .slider {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
+  background-color: #30343d;
   display: block;
   height: 100%;
+  left: 0;
   padding-top: 50vh;
-  width: 1rem;
+  position: fixed;
   text-align: center;
-  background-color: #373c46;
+  top: 0;
   transition: $transitionSpeed;
+  width: 1rem;
+  z-index: 99;
 
   &-open {
     margin-left: $sidebarWidth;
@@ -76,9 +91,50 @@ body {
 
 }
 
+#messages {
+  position: absolute;
+  border: 1px solid blue;
+  bottom: 0;
+  padding: 2rem;
+  height: 100%;
+  overflow-x: hidden; 
+  overflow-y: scroll;
+  width: 100%;
+}
+
+#chatinput {
+  background-color: #373c46;
+  bottom: 0;
+  margin-left: 1rem;
+  overflow-x: hidden;
+  //padding: 0 1rem 1.5rem 1rem; 
+  position: absolute;
+
+  &-form {
+    display: flex;
+  }
+}
+
+.chatinput{
+  &-wrapper{
+    width: 100%;
+    padding: 1rem;
+
+  }
+  &-input {
+    background-color: #3f4450;
+    color: #FFF;
+    font-size: 1.0rem;
+    padding: .2rem;
+    border: none;
+    height: 2.0rem;
+    //width: 100%;
+  }
+}
+
+
 .App {
   text-align: center;
-  
 }
   
 @media (prefers-reduced-motion: no-preference) {
