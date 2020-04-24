@@ -8,6 +8,10 @@ body {
   overflow-y: hidden;
 }
 
+.layout {
+  display: flex;
+}
+
 #root {
   width: 100%;
   max-width: 100%;
@@ -99,7 +103,7 @@ body {
   height: 100%;
   overflow-x: hidden; 
   overflow-y: scroll;
-  width: 100%;
+  width: 30rem;
 }
 
 #chatinput {
@@ -117,52 +121,19 @@ body {
 
 .chatinput{
   &-wrapper{
-    width: 100%;
     padding: 1rem;
-
+    width: 30rem;
   }
+
   &-input {
+    display: block;
+    width: 29rem;
     background-color: #3f4450;
     color: #FFF;
     font-size: 1.0rem;
     padding: .2rem;
     border: none;
     height: 2.0rem;
-    //width: 100%;
-  }
-}
-
-
-.App {
-  text-align: center;
-}
-  
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    margin: 0 auto;
   }
 }

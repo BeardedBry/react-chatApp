@@ -14,16 +14,19 @@ const Chat = () =>{
     }
 
     return (
-        <div>
+        <div className="layout">
             <div id="sidebar" className={`sidebar-${sidebarStatus}`}>
                 <Sidebar />
             </div>
-            <Slider toggle={toggleSidebar} status={sidebarStatus} />
+                <Slider toggle={toggleSidebar} status={sidebarStatus} />
             <div id="main" className={`slider-${sidebarStatus}`}>
                 <div className={`mainwidth-${sidebarStatus}`}>
                     <Messages />
                     <ChatInput />
                 </div>
+            </div>
+            <div id="game">
+                <p>Game Area</p>
             </div>
         </div>
     );
